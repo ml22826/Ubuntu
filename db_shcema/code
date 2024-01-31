@@ -1,0 +1,122 @@
+CREATE TABLE Sample (
+    SampleID VARCHAR(255) PRIMARY KEY,
+    PopulationCode VARCHAR(50)
+);
+
+CREATE TABLE Population (
+    PopulationCode VARCHAR(50) PRIMARY KEY,
+    PopulationName VARCHAR(255),
+    PopulationDescription TEXT,
+    SuperpopulationCode VARCHAR(50),
+    SuperpopulationName VARCHAR(255)
+);
+
+CREATE TABLE gwas_clinvar (
+    SNP_ID VARCHAR(255) PRIMARY KEY,
+    DISEASE_TRAIT VARCHAR(255),
+    CHR_ID DECIMAL(5, 1),
+    CHR_POS DECIMAL(10, 1),
+    MAPPED_GENE VARCHAR(255),
+    STRONGEST_SNP_RISK_ALLELE VARCHAR(255),
+    SNPS VARCHAR(255),
+    MERGED DECIMAL(5, 1),
+    SNP_ID_CURRENT DECIMAL(10, 1),
+    CONTEXT VARCHAR(255),
+    INTERGENIC DECIMAL(5, 1),
+    RISK_ALLELE_FREQUENCY DECIMAL(10, 6),
+    P_VALUE DECIMAL(20, 10),
+    PVALUE_MLOG DECIMAL(20, 6),
+    P_VALUE_TEXT VARCHAR(255),
+    OR_OR_BETA VARCHAR(255),
+    CI_95_TEXT VARCHAR(255),
+    PLATFORM VARCHAR(255),
+    SNPS_PASSING_QC DECIMAL(10, 0),
+    CNV VARCHAR(1)
+);
+
+CREATE TABLE INFORMATION (
+    SNP_ID VARCHAR(255) PRIMARY KEY,
+    INFORMATION VARCHAR(100000)
+);
+
+CREATE TABLE ALLELE (
+    CHROM INT(40),
+    POSITION INT(100),
+    SNP_ID VARCHAR(255) PRIMARY KEY,
+    REFERENCE_ALLELE VARCHAR(255),
+    ALTERNATE_ALLELE VARCHAR (255)
+);
+
+CREATE TABLE EUROPE_GEN (
+    europe_id INT AUTO_INCREMENT PRIMARY KEY,
+    sample_id INT, 
+    snip_id INT, 
+    genotype VARCHAR(255),
+    country_code VARCHAR(3)
+) PARTITION BY LIST COLUMNS (country_code) (
+    PARTITION p_gbr VALUES IN ('GBR'),
+    PARTITION p_fin VALUES IN ('FIN'),
+    PARTITION p_ibs VALUES IN ('IBS'),
+    PARTITION p_ceu VALUES IN ('CEU'),
+    PARTITION p_tsi VALUES IN ('TSI')
+);
+CREATE TABLE SIB_GEN (
+    sib_id INT AUTO_INCREMENT PRIMARY KEY,
+    sample_id INT, 
+    snip_id INT, 
+    genotype VARCHAR(255),
+    country_code VARCHAR(3)
+);
+CREATE TABLE EAS_GEN (
+    eas_id INT AUTO_INCREMENT PRIMARY KEY,
+    sample_id INT, 
+    snip_id INT, 
+    genotype VARCHAR(255),
+    country_code VARCHAR(3)
+) PARTITION BY LIST COLUMNS (country_code) (
+    PARTITION p_chs VALUES IN ('CHS'),
+    PARTITION p_cdx VALUES IN ('CDX'),
+    PARTITION p_khv VALUES IN ('KHV'),
+    PARTITION p_chb VALUES IN ('CHB'),
+    PARTITION p_jpt VALUES IN ('JPT')
+);
+CREATE TABLE SAS_GEN (
+    sas_id INT AUTO_INCREMENT PRIMARY KEY,
+    sample_id INT, 
+    snip_id INT, 
+    genotype VARCHAR(255),
+    country_code VARCHAR(3)
+) PARTITION BY LIST COLUMNS (country_code) (
+    PARTITION p_pjl VALUES IN ('PJL'),
+    PARTITION p_beb VALUES IN ('BEB'),
+    PARTITION p_stu VALUES IN ('STU'),
+    PARTITION p_itu VALUES IN ('ITU'),
+    PARTITION p_gih VALUES IN ('GIH')
+);
+CREATE TABLE AFR_GEN (
+    afr_id INT AUTO_INCREMENT PRIMARY KEY,
+    sample_id INT, 
+    snip_id INT, 
+    genotype VARCHAR(255),
+    country_code VARCHAR(3)
+) PARTITION BY LIST COLUMNS (country_code) (
+    PARTITION p_acb VALUES IN ('ACB'),
+    PARTITION p_gwd VALUES IN ('GWD'),
+    PARTITION p_esv VALUES IN ('ESV'),
+    PARTITION p_msl VALUES IN ('MSL'),
+    PARTITION p_yri VALUES IN ('YRI'),
+    PARTITION p_lwk VALUES IN ('LWK'),
+    PARTITION p_asw VALUES IN ('ASW')
+);
+CREATE TABLE AMR_GEN (
+    amr_id INT AUTO_INCREMENT PRIMARY KEY,
+    sample_id INT, 
+    snip_id INT, 
+    genotype VARCHAR(255),
+    country_code VARCHAR(3)
+) PARTITION BY LIST COLUMNS (country_code) (
+    PARTITION p_pur VALUES IN ('PUR'),
+    PARTITION p_clm VALUES IN ('CLM'),
+    PARTITION p_pel VALUES IN ('PEL'),
+    PARTITION p_mxl VALUES IN ('MXL')
+);
