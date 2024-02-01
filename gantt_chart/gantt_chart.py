@@ -1,6 +1,5 @@
 import plotly.express as px
 import pandas as pd
-import matplotlib as plt
 
 df = pd.DataFrame([
     dict(Task="Data acquisition from VCF file(1)", Start='2024-01-26', Finish='2024-02-01', Resource="Shathavi"),
@@ -42,6 +41,3 @@ df = df.sort_values(by='Start')
 fig = px.timeline(df, x_start="Start", x_end="Finish", y="Task", color="Resource")
 # fig.update_yaxes
 fig.show()
-
-# Download the figure
-plt.savefig()
