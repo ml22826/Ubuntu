@@ -1,0 +1,5 @@
+wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip #Download of snpEff
+unzip snpEff_latest_core.zip
+java -jar snpEff.jar download -v GRCh37.75 #Download of genome database
+java -jar snpEff.jar GRCh37.75 chr1.vcf.gz > output.an2n.vcf #Annotation of file
+
