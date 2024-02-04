@@ -4,9 +4,9 @@ CREATE TABLE Population (
     PopulationDescription TEXT,
     SuperpopulationCode VARCHAR(50),
     SuperpopulationName VARCHAR(255),
-    PRIMARY KEY (PopulationCode),
+    PRIMARY KEY (SuperpopulationCode),
     FOREIGN KEY (PopulationCode) REFERENCES Sample(PopulationCode),
-    FOREIGN KEY (PopulationCode) REFERENCES Allele_Frequency(PopulationCode)
+    FOREIGN KEY (SuperpopulationCode) REFERENCES Allele_Frequency(SuperpopulationCode)
 );
 
 CREATE TABLE Sample (
@@ -28,7 +28,7 @@ CREATE TABLE Varient (
 
 CREATE TABLE Allele_Frequency (
     SNP_ID INT,
-    PopulationCode INT,
+    SuperpopulationCode INT,
     AlternateAlleleFrequency FLOAT,
     ReferenceAlleleFrequency FLOAT,
     PRIMARY KEY (SNP_ID)
