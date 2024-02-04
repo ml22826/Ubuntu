@@ -29,7 +29,8 @@ CREATE TABLE Varient (
 CREATE TABLE Allele_Frequency (
     SNP_ID INT,
     PopulationCode INT,
-    Allele_Frequencies FLOAT,
+    AlternateAlleleFrequency FLOAT,
+    ReferenceAlleleFrequency FLOAT,
     PRIMARY KEY (SNP_ID)
 );
 
