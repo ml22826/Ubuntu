@@ -26,11 +26,14 @@ CREATE TABLE Varient (
     FOREIGN KEY (SNP_ID) REFERENCES gwas_clinvar(SNP_ID)
 );
 
-CREATE TABLE Allele_Frequency (
+CREATE TABLE Genotype_Frequency (
     SNP_ID VARCHAR(255),
     SuperpopulationCode VARCHAR(255),
     Alt_AF FLOAT,
     Ref_AF FLOAT,
+    Alt_GF FLOAT,
+    Het_GF FLOAT,
+    Ref_GF FLOAT,
     PRIMARY KEY (SNP_ID)
 );
 
