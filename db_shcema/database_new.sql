@@ -29,8 +29,8 @@ CREATE TABLE Varient (
 CREATE TABLE Allele_Frequency (
     SNP_ID VARCHAR(255),
     SuperpopulationCode VARCHAR(255),
-    AlternateAlleleFrequency FLOAT,
-    ReferenceAlleleFrequency FLOAT,
+    Alt_AF FLOAT,
+    Ref_AF FLOAT,
     PRIMARY KEY (SNP_ID)
 );
 
