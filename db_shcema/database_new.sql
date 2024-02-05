@@ -19,8 +19,8 @@ CREATE TABLE Varient (
     Chorm INT(40),
     Position INT(100),
     SNP_ID VARCHAR(255),
-    Reference_allele VARCHAR(255),
-    Alternate_allele VARCHAR (255),
+    Ref_allele VARCHAR(255),
+    Alt_allele VARCHAR (255),
     PRIMARY KEY (SNP_ID),
     FOREIGN KEY (SNP_ID) REFERENCES Allele_Frequency(SNP_ID),
     FOREIGN KEY (SNP_ID) REFERENCES gwas_clinvar(SNP_ID)
