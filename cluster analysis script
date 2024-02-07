@@ -1,0 +1,52 @@
+from flask import Flask, render_template, request, send_file
+from flask_sqlalchemy import SQLAlchemy
+from io import StringIO
+import pandas as pd
+from sklearn.metrics import pairwise_distances
+import matplotlib.pyplot as plt
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///genotype_frequencies.db'
+db = SQLAlchemy(app)
+
+class GenotypeFrequency(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    superpopulation_code = db.Column(db.String(10))
+    genotype_AA = db.Column(db.Float)
+    genotype_Aa = db.Column(db.Float)
+    genotype_aa = db.Column(db.Float)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/analyze', methods=['POST'])
+def analyze():
+    selected_superpopulations = request.form.getlist('superpopulations')
+    populations = GenotypeFrequency.query.filter(GenotypeFrequency.superpopulation_code.in_(selected_superpopulations)).all()
+
+    # Calculate pairwise population genetic differentiation
+    pairwise_diff = pairwise_distances([[pop.genotype_AA, pop.genotype_Aa, pop.genotype_aa] for pop in populations], metric='euclidean')
+    pairwise_diff_df = pd.DataFrame(pairwise_diff, index=[pop.superpopulation_code for pop in populations], columns=[pop.superpopulation_code for pop in populations])
+
+    # Visualize and save the matrix
+    plt.figure(figsize=(8, 6))
+    plt.imshow(pairwise_diff_df, cmap='coolwarm', interpolation='nearest')
+    plt.colorbar()
+    plt.title('Pairwise Population Genetic Differentiation')
+    plt.xticks(range(len(pairwise_diff_df.columns)), pairwise_diff_df.columns, rotation=45)
+    plt.yticks(range(len(pairwise_diff_df.index)), pairwise_diff_df.index)
+    plt.tight_layout()
+    plt.savefig('pairwise_genetic_differentiation.png')
+
+    # Save results to a text file
+    result_text = pairwise_diff_df.to_csv()
+
+    return render_template('result.html', result=result_text)
+
+@app.route('/download')
+def download():
+    return send_file('pairwise_genetic_differentiation.png', as_attachment=True)
+
+if __name__ == '__main__':
+    app.run(debug=True)
