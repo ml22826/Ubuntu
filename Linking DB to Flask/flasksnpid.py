@@ -20,7 +20,7 @@ def snps():
     
     config = {
         'user': 'root',
-        'password': 'Singapour9802!',  
+        'password': 'xxx',  
         'host': 'localhost',
         'database': 'ubuntu4',
     }
