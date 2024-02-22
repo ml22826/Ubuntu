@@ -1,0 +1,174 @@
+###option 1
+import pandas as pd
+import allel
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Assuming df2 is already defined after reading the TSV file
+# df2 = pd.read_csv(file_path, delimiter='\t')
+
+# Define the selected populations
+selected_populations = ['SIB', 'GBR', 'FIN', 'CHS', 'PUR', 'CDX', 'CLM', 'IBS', 'PEL', 'PJL',
+                       'KHV', 'ACB', 'GWD', 'ESN', 'BEB', 'MSL', 'STU', 'ITU', 'CEU', 'YRI',
+                       'CHB', 'JPT', 'LWK', 'ASW', 'MXL', 'TSI', 'GIH']
+
+# Filter the dataframe for selected populations
+selected_df = df2[df2['POP'].isin(selected_populations)]
+
+# Extract allele frequencies for selected populations
+allele_freqs = selected_df.pivot_table(index='POP', columns='SNP', values='ALT_FRQ')
+
+# Calculate pairwise Fst values
+pairwise_fst = allel.pairwise_fst(allele_freqs.values.T)
+
+# Create a DataFrame for the pairwise Fst values
+pairwise_fst_df = pd.DataFrame(pairwise_fst, index=selected_populations, columns=selected_populations)
+
+# Visualize the matrix as a heatmap
+plt.figure(figsize=(10, 8))
+sns.heatmap(pairwise_fst_df, annot=True, cmap='coolwarm', fmt='.4f')
+plt.title('Pairwise Fst Values')
+plt.xlabel('Populations')
+plt.ylabel('Populations')
+plt.xticks(rotation=45)
+plt.yticks(rotation=0)
+plt.tight_layout()
+plt.show()
+
+# Save pairwise Fst values to a text file
+pairwise_fst_df.to_csv('pairwise_fst_values.txt', sep='\t')
+
+print("Pairwise Fst values have been saved to 'pairwise_fst_values.txt'")
+
+###option 2
+
+import allel
+
+def calculate_fst(pop1_genotypes, pop2_genotypes):
+    # Convert genotypes to allele counts
+    pop1_ac = pop1_genotypes.count_alleles()
+    pop2_ac = pop2_genotypes.count_alleles()
+    
+    # Calculate Fst using Weir and Cockerham's estimator
+    fst, _ = allel.stats.weir_cockerham_fst(pop1_ac, pop2_ac)
+    
+    return fst
+
+# Example usage
+pop1_genotypes = ...
+pop2_genotypes = ...
+
+fst_value = calculate_fst(pop1_genotypes, pop2_genotypes)
+print("Fst value:", fst_value)
+
+###Option 3
+import numpy as np
+
+def calculate_fst(pop1_allele_freq, pop2_allele_freq):
+    # Step 1: Calculate average allele frequency
+    avg_allele_freq = (pop1_allele_freq + pop2_allele_freq) / 2
+    
+    # Step 2: Calculate expected heterozygosity (He) for each population
+    pop1_he = 1 - np.sum(pop1_allele_freq**2 + (1 - pop1_allele_freq)**2)
+    pop2_he = 1 - np.sum(pop2_allele_freq**2 + (1 - pop2_allele_freq)**2)
+    
+    # Step 3: Calculate total heterozygosity (Ht) across both populations
+    total_allele_freq = (pop1_allele_freq + pop2_allele_freq) / 2
+    total_he = 1 - np.sum(total_allele_freq**2 + (1 - total_allele_freq)**2)
+    
+    # Step 4: Calculate genetic differentiation (Gst)
+    gst = (total_he - (pop1_he + pop2_he) / 2) / total_he
+    
+    # Step 5: Calculate Fst
+    n = 2  # Number of populations
+    fst = gst / (1 + ((n - 1) * gst))
+    
+    return fst
+
+###Option 4
+
+import mysql.connector
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+# Connect to MySQL database
+def connect_to_database():
+    # Connect to your MySQL database
+    # Replace the placeholder values with your actual database credentials
+    return mysql.connector.connect(
+        host="your_host",
+        user="your_username",
+        password="your_password",
+        database="your_database"
+    )
+
+# Retrieve allele frequency data for selected populations
+def retrieve_allele_frequencies(connection, populations):
+    # Execute SQL query to retrieve allele frequency data for selected populations
+    # Adjust the SQL query to fit your database schema and query the required data
+    query = f"SELECT * FROM allele_frequencies WHERE population IN {populations}"
+    cursor = connection.cursor()
+    cursor.execute(query)
+    allele_frequencies = cursor.fetchall()
+    cursor.close()
+    return allele_frequencies
+
+# Create population matrix
+def create_population_matrix(allele_frequencies):
+    # Process the allele frequency data to create the population matrix
+    # Convert the data into a suitable format (e.g., DataFrame or numpy array)
+    # Each row represents a SNP, and each column represents a population
+    # Return the population matrix
+    pass
+
+# Calculate Fst values
+def calculate_fst(population_matrix):
+    # Implement the Fst calculation based on the population matrix
+    # Calculate Fst values for each pair of populations
+    # Return the Fst values
+    pass
+
+# Render results in a heatmap visualization
+def render_heatmap(fst_values):
+    # Create a heatmap visualization using Matplotlib, Seaborn, or Plotly
+    # Customize the heatmap to display population names as row and column labels
+    # Show the heatmap
+    pass
+
+# Allow users to download the file
+def download_file(fst_values):
+    # Optionally, save the Fst values to a file (e.g., CSV) that users can download
+    # Provide a download link or button in the web interface to allow users to download the file
+    pass
+
+def main():
+    # Define the selected populations
+    selected_populations = ('SIB', 'GBR', 'FIN', 'CHS', 'PUR', 'CDX', 'CLM', 'IBS', 'PEL', 'PJL',
+                            'KHV', 'ACB', 'GWD', 'ESN', 'BEB', 'MSL', 'STU', 'ITU', 'CEU', 'YRI',
+                            'CHB', 'JPT', 'LWK', 'ASW', 'MXL', 'TSI', 'GIH')
+
+    # Connect to the MySQL database
+    connection = connect_to_database()
+
+    # Retrieve allele frequency data for selected populations
+    allele_frequencies = retrieve_allele_frequencies(connection, selected_populations)
+
+    # Create population matrix
+    population_matrix = create_population_matrix(allele_frequencies)
+
+    # Calculate Fst values
+    fst_values = calculate_fst(population_matrix)
+
+    # Render results in a heatmap visualization
+    render_heatmap(fst_values)
+
+    # Allow users to download the file
+    download_file(fst_values)
+
+    # Close the database connection
+    connection.close()
+
+if __name__ == "__main__":
+    main()
