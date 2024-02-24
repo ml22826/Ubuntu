@@ -1,1 +1,5 @@
-snpEf
+snpEF --> used to annotate the vcf, what was especially useful from the annotation was the gene names where the SNP could be acting upon 
+
+Linking VCF SNP IDs to their dbSNP IDs --> 
+
+Clinical implications annotation --> Folder shows multiple methods used to link each SNP to potential clinical impacts or traits. To find clinical implications we used information from gwas website and from clinvar 
