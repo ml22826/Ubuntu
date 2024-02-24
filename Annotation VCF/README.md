@@ -10,4 +10,4 @@
 
 ## Clinical Implications Annotation
 
-**Description:** This folder looks into the various methodologies which were used to establish links between SNPs and potential clinical implications or traits. Information from GWAS websites and ClinVar is u to explore and find clinical associations.
+**Description:** This folder looks into the various methodologies which were used to establish links between SNPs and potential clinical implications or traits. Information from GWAS websites and ClinVar is used to explore and find clinical associations.
