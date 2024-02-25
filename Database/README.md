@@ -13,8 +13,8 @@ The dashed lines connecting tables illustrate the various relationships between 
 ##Table giving brief description of each table 
 | Table name | Brief Description | Source | Link | 
 |-----------------|-----------------|-----------------|-----------------|
-| SNP_info| Row 1, Column 2| Row 1, Column 3|Row2,|
-| Sample | Row 2, Column 2| Row 2, Column 3|Rowe|
+| SNP_info| Processed VCF file, contains information for each SNP such as position, their clinical impact (if any) and genes they affect |chr1.vcf.gz file available on the QMUL website|Row2,|
+| Sample | ID of each sample from the 3928 indivudals and their associated population code| file |Rowe|
 | Population | Row 2, Column 2| Row 2, Column 3|Rowe|
 | genes| Row 2, Column 2| Row 2, Column 3|Rowe|
 | Allele_frequencies | Row 2, Column 2| Row 2, Column 3|Rowe|
