@@ -16,6 +16,7 @@
 
 
 ```mermaid
+%%{init: {'themeVariables': {'fontSize': '16px'}}}%%
 flowchart TD
 A("chr1.vcf.gz") -->|Annotation using snpEff| B("annotated38.vcf.gz")
 B -->|Cleaning up the annotated VCF| C("simplified_file38.vcf.gz")
