@@ -1,5 +1,8 @@
 # Annotation Folder README
 
+This folder contains all the files and folders required to annotate our VCF file. 
+The final annotated VCF file was in the form of a CSV and contained information about gene names, clinical relevance and dbSNPs for the SNPs in the original VCF 
+
 ## SnpEff
 
 **Description:** SnpEff is used here for annotating the VCF file. The annotation primarily focuses on extracting gene names associated with SNPs.
@@ -15,5 +18,14 @@
 
 
 
+Below, is a  flowchart illustrating the sequential steps undertaken to annotate the VCF file. While hyperlinking isn't directly supported on GitHub for this flowchart, below the diagram includes all the necessary links for users to navigate through the folder, providing insights into the steps involved in annotating the file with gene names, clinical information, and dbSNP IDs.
+
 ![Diagram](https://github.com/camilaballenghien/cballenghien.github.io/blob/master/images/flowchart.drawio.png)
+
+SnpEff Annotation code : https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/SnpEff/code 
+Cleaning up the annotated VCF code : 
+Linking SNPs to their dbSNP_IDs : 
+Adding Clinical relevance information to the VCF: https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Clinical%20relevance/Adding_clinvar(1).py  Annotation VCF/Clinical relevance/Adding_clinvar(1).py
+
+
 
