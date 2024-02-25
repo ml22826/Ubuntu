@@ -16,7 +16,7 @@
 
 
 ```mermaid
-%%{init: {'themeVariables': {'fontSize': '16px'}}}%%
+
 flowchart TD
 flowchart TD
     A["<a href='https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/SnpEff/code' target='_blank'>chr1.vcf.gz</a>"] -->|Annotation using snpEff| B["annotated38.vcf.gz"]
