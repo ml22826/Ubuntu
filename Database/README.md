@@ -11,7 +11,14 @@ The dashed lines connecting tables illustrate the various relationships between 
 
 
 ##Table giving brief description of each table 
-| Table name | Description| Source |Link| 
+| Table name | Brief Description | Source | Link | 
 |-----------------|-----------------|-----------------|-----------------|
-| Row 1, Column 1| Row 1, Column 2| Row 1, Column 3|Row2,|
-| Row 2, Column 1| Row 2, Column 2| Row 2, Column 3|Rowe|
+| SNP_info| Row 1, Column 2| Row 1, Column 3|Row2,|
+| Sample | Row 2, Column 2| Row 2, Column 3|Rowe|
+| Population | Row 2, Column 2| Row 2, Column 3|Rowe|
+| genes| Row 2, Column 2| Row 2, Column 3|Rowe|
+| Allele_frequencies | Row 2, Column 2| Row 2, Column 3|Rowe|
+| Genotype_frequencies | Row 2, Column 2| Row 2, Column 3|Rowe|
+| PCA_values | Row 2, Column 2| Row 2, Column 3|Rowe|
+| Admixture | Row 2, Column 2| Row 2, Column 3|Rowe|
+
