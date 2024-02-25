@@ -24,9 +24,16 @@ Below, is a  flowchart illustrating the sequential steps undertaken to annotate 
 
 
 [SnpEff Annotation code](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/SnpEff/code)
-Cleaning up the annotated VCF code :
-Linking SNPs to their dbSNP_IDs : 
+
+[Cleaning up the annotated VCF code](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Linking%20SNP%20to%20their%20dbSNP%20ids/code)
+
+[Linking SNPs to their dbSNP_IDs](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Linking%20SNP%20to%20their%20dbSNP%20ids/code)
+
 [Adding Clinical relevance information to the VCF](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Clinical%20relevance/Adding_clinvar(1).py)
+
+[Adding more clinical info]
+
+[Cleaning up the file]
 
 
 
