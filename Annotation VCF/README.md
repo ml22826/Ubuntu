@@ -16,7 +16,7 @@
 
 
 ```mermaid
-graph TD
+flowchart TD
 start[<font size=6>附一电子报销流程]-->a1[<font size=6>1.发票检验]
 a1-->b1[<font size=6>发票税号正确]
 b1--<font size=6>是-->c1[<font size=6>发票下方盖公司有效印章]
