@@ -31,9 +31,9 @@ Below, is a  flowchart illustrating the sequential steps undertaken to annotate 
 
 [Adding Clinical relevance information to the VCF](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Clinical%20relevance/Adding_clinvar(1).py)
 
-[Adding more clinical info]
+[Adding more clinical info](https://github.com/ml22826/Ubuntu/tree/main/Annotation%20VCF/Clinical%20relevance/Adding%20more%20clinical%20relevance%20information)
 
-[Cleaning up the file]
+[Cleaning up the file(final cleanup)](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Clinical%20relevance/Adding%20more%20clinical%20relevance%20information/cleaning_final_finle_3.py)
 
 
 
