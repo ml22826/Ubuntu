@@ -14,7 +14,7 @@
 
 
 ```mermaid
-%%{init: {'themeVariables': {'fontSize': '16px'}}}%%
+%%{init: {'themeVariables': {'fontSize': '100px'}}}%%
 flowchart LR
     A("chr1.vcf.gz") -->|Annotation using snpEff| B("annotated38.vcf.gz")
     B --> C("simplified_file38.vcf.gz");
