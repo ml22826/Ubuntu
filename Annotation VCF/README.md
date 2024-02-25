@@ -15,5 +15,5 @@
 
 
 
-![Diagram]https://github.com/camilaballenghien/cballenghien.github.io/blob/master/images/flow.drawio.pdf
+![Diagram]https://github.com/camilaballenghien/cballenghien.github.io/blob/master/images/flowchart.drawio.png
 
