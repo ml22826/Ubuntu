@@ -24,5 +24,5 @@ C -->|Linking SNPs to their dbSNP_IDs| D("output_file.csv")
 D -->|Adding Clinical relevant information to the VCF| E("filtered_2_draft.csv")
 E -->|Adding more clinical info and cleaning up file| F("complete_snp_info.csv")
 
-classDef className fill:#f9f,stroke:#333,stroke-width:4px
+classDef className fill:#oof,stroke:#333,stroke-width:4px
 class start,a1,a2,a3 className;
