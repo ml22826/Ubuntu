@@ -15,7 +15,7 @@
 
 ```mermaid 
 flowchart LR
-    A("chr1.vcf.gz") -->|Annotation using snpEff| B("annotated38.vcf.gz")
+    A("chr1.vcf.gz")<font size=6> -->|Annotation using snpEff| B("annotated38.vcf.gz")
     B --> C("simplified_file38.vcf.gz")
     C --> D("output_file.csv")
     D -->|Linking SNPs to their dbSNP IDs| E("filtered_2_draft.csv")
