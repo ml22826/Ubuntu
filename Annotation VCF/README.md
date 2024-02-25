@@ -18,13 +18,9 @@
 ```mermaid
 flowchart TD
 A("chr1.vcf.gz") -->|Annotation using snpEff| B("annotated38.vcf.gz")
-    B --> C("simplified_file38.vcf.gz");
-    C --> D("output_file.csv")
-    D -->|Linking SNPs to their dbSNP IDs| E("filtered_2_draft.csv")
-    E --> F("complete_snp_info.csv")
-
-    B -->|Cleaning up the annotated VCF| C
-    D -->|Adding Clinical relevance information to the VCF| E
-    E -->|Adding more clinical info and cleaning up file| F
+    B --> Cleaning up the annotated VCF|C("simplified_file38.vcf.gz");
+    C -->|Linking SNPs to their dbSNP_IDs| D("output_file.csv")
+    D -->|Adding Clinical relevant information to the VCF| E("filtered_2_draft.csv")
+    E -->|Adding more clinical info and cleaning up file| F("complete_snp_info.csv")
 classDef className fill:#f9f,stroke:#333,stroke-width:4px
 class start,a1,a2,a3 className;
