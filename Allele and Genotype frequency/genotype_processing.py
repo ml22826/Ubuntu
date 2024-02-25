@@ -2,19 +2,34 @@ import pandas as pd
 import numpy as np
 import os
 
-#allele frequency file
-input_csv='allele_freq.csv'
+#input CSV file containing allele frequency data
+input_csv = 'allele_freq.csv'
 
-#chunk size to go over the file
-chunk_size = 50000  # 50 000 lines 
-#read the CSV file in chunks and calculate genotype frequency based on the hardy weinburg principle
+#chunk size to read the CSV file in chunks (processing file in chunks to prevent the computer from crashing)
+chunk_size = 50000  # 50,000 lines 
+
+#iteration over chunks of the CSV file and calculate genotype frequencies based on the Hardy-Weinberg principle
 for df_chunk in pd.read_csv(input_csv, chunksize=chunk_size):
-    desired_order=['SNP','CHR','POS','HOM_ALT','HOM_REF','HET_REF','POP']
-    df_chunk['HOM_ALT']=df_chunk['ALT_FRQ']**2
-    df_chunk['HOM_REF']=df_chunk['REF_FRQ']**2
-    df_chunk['HET_REF']=df_chunk['ALT_FRQ']*df_chunk['REF_FRQ']*2
-    df_chunk.drop(columns=['ALT_FRQ','REF_FRQ'],inplace=True)
-    df_chunk=df_chunk[desired_order]
-    df_chunk.to_csv('genotype_freq.csv',  mode='a', header=not os.path.exists('genotype_freq.csv'), index=False)
+    #desired order of columns for the output file
+    desired_order = ['SNP', 'CHR', 'POS', 'HOM_ALT', 'HOM_REF', 'HET_REF', 'POP']
+    
+    #calculation of homozygous alternate genotype frequency
+    df_chunk['HOM_ALT'] = df_chunk['ALT_FRQ'] ** 2
+    
+    #calculation of homozygous reference genotype frequency
+    df_chunk['HOM_REF'] = df_chunk['REF_FRQ'] ** 2
+    
+    #calculation of heterozygous genotype frequency
+    df_chunk['HET_REF'] = df_chunk['ALT_FRQ'] * df_chunk['REF_FRQ'] * 2
+    
+    #drop the original frequency columns
+    df_chunk.drop(columns=['ALT_FRQ', 'REF_FRQ'], inplace=True)
+    
+    #reordering of columns according to desired order
+    df_chunk = df_chunk[desired_order]
+    
+    #appending chunk to the output CSV file, creating the file if it doesn't exist
+    df_chunk.to_csv('genotype_freq.csv', mode='a', header=not os.path.exists('genotype_freq.csv'), index=False)
+
     
     
