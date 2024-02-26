@@ -20,7 +20,8 @@ The dashed lines connecting tables illustrate the various relationships between 
 | Allele Frequencies| allele frequencies for each SNP calculated across all the populations |Created using plink v.1.9 and by calculating allele frequency based on minor allele frequency (plink v.1.9 only allowed us to generate the minor allele frequency) |code for allele frequency folder |
 | Genotype Frequencies | genotype frequencies for each SNP calculated across all the population | Calculated using the Hardy Weinberg principle                                                               | code for genotype frequencies calculation |
 | PCA Values         | Principal component analysis (PCA) values for each sample.      |                                                     | Analysis folder|
-| Admixture          | Information about admixture within the population.              | Created using the ADMIXTURE software | Row 2, Column 3 | Analysis folder|
+| Admixture          | Information about admixture within the population.          | Created using the ADMIXTURE software | Analysis folder|
+
 
 This table provides a brief overview of each table included in the dataset, along with their respective sources and links for further reference.
 
