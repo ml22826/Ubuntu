@@ -11,14 +11,17 @@ The dashed lines connecting tables illustrate the various relationships between 
 
 
 ##Table giving brief description of each table 
-| Table name | Brief Description | Source | Link | 
-|-----------------|-----------------|-----------------|-----------------|
-| SNP_info| Processed VCF file, contains information for each SNP such as position, their clinical impact (if any) and genes they affect |info is taken from chr1.vcf.gz. Clinical impact information was taken from GWAS and ClinVAR. The GWAS info can be found [here](https://www.ebi.ac.uk/gwas/docs/file-downloads), the file downloaded was All associations v.1|Row2,|
-| Sample | ID of each sample from the 3928 indivudals and their associated population code| file |Rowe|
-| Population | Row 2, Column 2| Row 2, Column 3|Rowe|
-| genes| Row 2, Column 2| Row 2, Column 3|Rowe|
-| Allele_frequencies | Row 2, Column 2| Row 2, Column 3|Rowe|
-| Genotype_frequencies | Row 2, Column 2| Row 2, Column 3|Rowe|
-| PCA_values | Row 2, Column 2| Row 2, Column 3|Rowe|
-| Admixture | Row 2, Column 2| Row 2, Column 3|Rowe|
+## Summary of Tables
+| Table Name         | Description                                                     | Source                                                                        | Link |
+|--------------------|-----------------------------------------------------------------|-------------------------------------------------------------------------------|------|
+| SNP_info           | Contains information for each SNP including position, clinical impact, and affected genes. | SNP information sourced from chr1.vcf.gz. Clinical impact data obtained from GWAS and ClinVar. GWAS data can be accessed [here](https://www.ebi.ac.uk/gwas/docs/file-downloads) (All associations v.1). ClinVar clinical information available [here](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/) (clinvar.vcf.gz). | [Link](Row2) |
+| Sample             | Identifier for each sample among 3928 individuals and their associated population code. | Internal file                                                                   | [Link](Rowe) |
+| Population         | Information about populations.                                   | Row 2, Column 2                                                                | Row 2, Column 3 |
+| Genes              | Genetic information about genes.                                 | Row 2, Column 2                                                                | Row 2, Column 3 |
+| Allele Frequencies| Frequencies of alleles within the population.                   | Row 2, Column 2                                                                | Row 2, Column 3 |
+| Genotype Frequencies | Frequencies of genotypes within the population.                | Row 2, Column 2                                                                | Row 2, Column 3 |
+| PCA Values         | Principal component analysis (PCA) values for each sample.      | Row 2, Column 2                                                                | Row 2, Column 3 |
+| Admixture          | Information about admixture within the population.              | Row 2, Column 2                                                                | Row 2, Column 3 |
+
+This table provides a brief overview of each table included in the dataset, along with their respective sources and links for further reference.
 
