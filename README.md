@@ -11,6 +11,23 @@ What it does:
   
 This project was developed by the 'Ubuntu' student group at Queen Mary University of London as part of a collaborative effort for the Software Development module.
 
+# Requirements 
+
+To run the user interface, make sure  you have the following installed and updated: 
+
+
+Flask
+
+Pandas 
+
+Matplotlib 
+
+mysql-connector-python
+
+-- other ones 
+
+
+
 #### Setup
 
 
