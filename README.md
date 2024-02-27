@@ -51,11 +51,7 @@ Open the MySQL command line and create a database called ubuntu using this comma
 ```SQL
 CREATE DATABASE ubuntu;
 ```
-Import the SQL file into the db 
-
-Use genome_data_export1.sql first
-
-If it doesn't work try the other ones.
+Import the SQL file into the db (ubuntu.sql file)
 
 Import the file to the DB:
 ```bash
@@ -63,7 +59,8 @@ mysql -u username -p ubuntu < /path/to/your/ubuntu.sql
 ```
 
 
-User can also create an identical database from scratch by following the instructions inside SQL_db_instructions folder. This file also contains random data from our database that can populate the new db.
+User can also create an identical database from scratch by running the SQL script which will create all the tables necessary (including the indexing and paritioning).
+In this folder there is also csv files which aren't too large that the user can download. 
 
 
 
