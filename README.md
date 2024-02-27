@@ -30,7 +30,7 @@ mysql-connector-python
 
 This command on the CMD will install all the correct packages 
 
-#### Setup
+# Setup
 
 
 ```bash
@@ -38,3 +38,32 @@ python3.10 -m venv .venv_project
 source .venv_project/bin/activate
 pip install -r requirements.txt
 ```
+Download the DB SQL Script (as the DB is large it might take a few hours): 
+Sharepoint link (zipped file):  
+Download the whole Flask app (make sure you have installed the requirements) 
+Sharepoint link: 
+
+Install MySQL server 8.0 
+
+# MySQL 
+
+Create a database called ubuntu:
+```bash
+CREATE DATABASE ubuntu;
+```
+Import the SQL file into MySQL using:
+
+Use genome_data_export1.sql first
+
+If it doesn't work try the other ones.
+
+Import the file to the DB:
+
+Path/to/Mysql.exe -u root -p genome_data < "path/to/genome_data.sql"
+
+User can also create an identical database from scratch by following the instructions inside SQL_db_instructions folder. This file also contains random data from our database that can populate the new db.
+
+
+
+
+
