@@ -11,7 +11,26 @@ What it does:
   
 This project was developed by the 'Ubuntu' student group at Queen Mary University of London as part of a collaborative effort for the Software Development module.
 
-#### Setup
+# Requirements 
+
+To run the user interface, make sure  you have the following installed and updated: 
+
+Python 3.10
+
+Flask
+
+Pandas 
+
+Matplotlib 
+
+mysql-connector-python
+
+-- other ones 
+
+
+This command on the CMD will install all the correct packages 
+
+# Setup
 
 
 ```bash
@@ -19,3 +38,33 @@ python3.10 -m venv .venv_project
 source .venv_project/bin/activate
 pip install -r requirements.txt
 ```
+Download the DB SQL Script (as the DB is large it might take a few hours): 
+Sharepoint link (zipped file):  
+Download the whole Flask app (make sure you have installed the requirements) 
+Sharepoint link: 
+
+Install MySQL server 8.0 
+
+# MySQL 
+
+Open the MySQL command line and create a database called ubuntu using this command:
+```SQL
+CREATE DATABASE ubuntu;
+```
+Import the SQL file into the db (ubuntu.sql file)
+
+Import the file to the DB:
+```bash
+mysql -u username -p ubuntu < /path/to/your/ubuntu.sql
+```
+
+
+User can also create an identical database from scratch by running the SQL script which will create all the tables necessary (including the indexing and paritioning).
+In this folder there is also csv files which aren't too large that the user can download. 
+
+# RUNNING THE SOFTWARE (FLASK)
+
+
+
+
+
