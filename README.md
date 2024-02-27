@@ -59,7 +59,7 @@ If it doesn't work try the other ones.
 
 Import the file to the DB:
 ```bash
-mysql -u username -p your_ubuntu < /path/to/your/ubuntu.sql
+mysql -u username -p ubuntu < /path/to/your/ubuntu.sql
 ```
 
 
