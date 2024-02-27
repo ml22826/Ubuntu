@@ -48,7 +48,7 @@ Install MySQL server 8.0
 # MySQL 
 
 Create a database called ubuntu:
-```bash
+```SQL
 CREATE DATABASE ubuntu;
 ```
 Import the SQL file into MySQL using:
