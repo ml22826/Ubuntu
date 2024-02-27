@@ -28,6 +28,7 @@ mysql-connector-python
 -- other ones 
 
 
+This command on the CMD will install all the correct packages 
 
 #### Setup
 
