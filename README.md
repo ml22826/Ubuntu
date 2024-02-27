@@ -62,6 +62,8 @@ mysql -u username -p ubuntu < /path/to/your/ubuntu.sql
 User can also create an identical database from scratch by running the SQL script which will create all the tables necessary (including the indexing and paritioning).
 In this folder there is also csv files which aren't too large that the user can download. 
 
+# RUNNING THE SOFTWARE (FLASK)
+
 
 
 
