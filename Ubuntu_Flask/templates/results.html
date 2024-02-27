@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SNP Data</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="/static/image/icon.png" class="icon" />
+      <ul>
+        <li class="bar">
+          <a href="/allele&genotype_frequencies-clinical_relevance"
+            >Allele & Genotype Frequencies, Clinical Relevance</a
+          >
+        </li>
+        <li><a href="/admixture_analysis">Admixture Analysis</a></li>
+        <li><a href="/clustering_analysis">Clustering Analysis</a></li>
+        <li><a href="/">Home</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      
+      <a href="/allele&genotype_frequencies-clinical_relevance/pop_matrix?file_path={{ file_path }}" class="pop_matrix"><button>Population Matrix</button></a>
+
+        <h1 class="text_middle">SNP Data from MySQL Database</h1>
+
+        <!-- Create the table for SNP data -->
+        <table class="graph_middle" border="1">
+          <tr>
+            <th>CHROM</th>
+            <th>POS</th>
+            <th>SNP_ID</th>
+            <th>REF</th>
+            <th>ALT</th>
+            <th>GENES</th>
+            <th>dbSNP_ID</th>
+            <th>Clinical_impact</th>
+            <th>ALT_FRQ</th>
+            <th>REF_FRQ</th>
+            <th>HOM_ALT</th>
+            <th>HOM_REF</th>
+            <th>HET</th>
+            <th>POP</th>
+          </tr>
+          {% for result in results %}
+          <tr>
+            <td>{{ result[0] }}</td>
+            <td>{{ result[1] }}</td>
+            <td>{{ result[2] }}</td>
+            <td>{{ result[3] }}</td>
+            <td>{{ result[4] }}</td>
+            <td>{{ result[5] }}</td>
+            <td>{{ result[6] }}</td>
+            <td>{{ result[7] }}</td>
+            <td>{{ result[8] }}</td>
+            <td>{{ result[9] }}</td>
+            <td>{{ result[10] }}</td>
+            <td>{{ result[11] }}</td>
+            <td>{{ result[12] }}</td>
+            <td>{{ result[13] }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
