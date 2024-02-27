@@ -47,19 +47,21 @@ Install MySQL server 8.0
 
 # MySQL 
 
-Create a database called ubuntu:
+Open the MySQL command line and create a database called ubuntu using this command:
 ```SQL
 CREATE DATABASE ubuntu;
 ```
-Import the SQL file into MySQL using:
+Import the SQL file into the db 
 
 Use genome_data_export1.sql first
 
 If it doesn't work try the other ones.
 
 Import the file to the DB:
+```bash
+mysql -u username -p your_ubuntu < /path/to/your/ubuntu.sql
+```
 
-Path/to/Mysql.exe -u root -p genome_data < "path/to/genome_data.sql"
 
 User can also create an identical database from scratch by following the instructions inside SQL_db_instructions folder. This file also contains random data from our database that can populate the new db.
 
