@@ -11,7 +11,7 @@ What it does:
   
 This project was developed by the 'Ubuntu' student group at Queen Mary University of London as part of a collaborative effort for the Software Development module.
 
-# Requirements 
+## Requirements 
 
 To run the user interface, make sure  you have the following installed and updated: 
 
@@ -30,7 +30,7 @@ mysql-connector-python
 
 This command on the CMD will install all the correct packages 
 
-# Setup
+## Setup
 
 
 ```bash
@@ -45,7 +45,7 @@ Sharepoint link:
 
 Install MySQL server 8.0 
 
-# MySQL 
+## MySQL 
 
 Open the MySQL command line and create a database called ubuntu using this command:
 ```SQL
@@ -62,8 +62,25 @@ mysql -u username -p ubuntu < /path/to/your/ubuntu.sql
 User can also create an identical database from scratch by running the SQL script which will create all the tables necessary (including the indexing and paritioning).
 In this folder there is also csv files which aren't too large that the user can download. 
 
-# RUNNING THE SOFTWARE (FLASK)
+## RUNNING THE SOFTWARE (FLASK)
 
+To run the web application, move to Ubuntu_Flask directory and execute the commands based on OS:
+
+### Run flask on WINDOWS:
+
+```bash
+set FLASK_APP=app.py
+set FLASK_DEBUG=1
+flask run
+```
+
+### Run flask on LINUX:
+
+```bash
+export FLASK_APP=app.py
+export FLASK_DEBUG=1
+flask run
+```
 
 
 
