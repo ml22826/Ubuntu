@@ -4,7 +4,7 @@ ________________________________________
 To run the web application, move to Ubuntu_Flask directory and execute the commands based on OS:
 ### Run flask on WINDOWS using:
 OPEN COMMAND PROMPT, GO TO CORRECT DIRECTORY of file (cd ....)
-set FLASK_APP=__init__.py
+<br> set FLASK_APP=__init__.py <br>
 set FLASK_DEBUG=1
 flask run
 ### Run flask on LINUX using:
