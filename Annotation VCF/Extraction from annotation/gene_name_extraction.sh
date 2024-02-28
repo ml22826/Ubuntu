@@ -1,4 +1,4 @@
-Below is the code I used to extract the gene names that the SNPs would be acting upon: 
+#Below is the code I used to extract the gene names that the SNPs would be acting upon: 
 
 #decompression and processing of the annotated VCF file (2 commands separated by |) 
 zcat annotatedg38.vcf.gz | awk -F'\t' 'BEGIN {                   #zcat decompresses the file 

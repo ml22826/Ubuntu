@@ -21,3 +21,4 @@ new_df.rename(columns={'GENE_NAMES': 'GENE'}, inplace=True)
 #output
 output_file_path = 'processed_genes.csv'  
 new_df.to_csv(output_file_path, index=False)
+

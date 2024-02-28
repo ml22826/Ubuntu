@@ -67,7 +67,8 @@ df=pd.DataFrame(data)
 #Merging here the df created by merging the gwas file and the vcf (common) with this new datafraframe (df)
 #this will allow to create a file containing both gwas clinical information and clinvar clinical information
 common2=pd.merge(common,df,on=['POS','REF','ALT'],how='left')
-common2['Clinical relevance']=list(zip(common2['Clinical relevance'],common2['CLINICAL IMPLICATIONS']))
-common2.drop(columns={'CLINICAL IMPLICATIONS','CHROM','ID_y'},inplace=True)
+common2['Clinical_impact']=list(zip(common2['Clinical relevance'],common2['CLINICAL IMPLICATIONS']))
+common2.drop(columns={'CLINICAL IMPLICATIONS','CHROM','ID_y','Clinical relevance'},inplace=True)
 
 common2.to_csv('filtered2_draft.csv')
+

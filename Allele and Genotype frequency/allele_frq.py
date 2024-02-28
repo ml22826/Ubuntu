@@ -1,36 +1,14 @@
-import pandas as pd
+import pandas as pd 
 import os 
-
-#function used to determine the alternate allele frequency based on the plink minor allele frequency file generated using plink v.1.9
-#This is necessary as plink v.1.9 calculates the minor allele frequency which is usually the alternate allele but can sometimes be the reference allele. 
-def adjust_maf(row):
-    '''Function which determines whether the minor allele is the alternate or reference allele for each SNP.
-    Keeps the MAF (Minor Allele Frequency) score as the alternate allele frequency if the minor allele=alternate allele . 
-    Changes the alternate allele frequency to 1-MAF if minor allele=reference allele.'''
-    
-    #initialize variable which contains the alternate allele
-    alternate_allele = row['ALT']
-    
-    #check if the alternate allele is the minor allele
-    if alternate_allele == row['A1']:
-        return row['MAF']  #if it's the same as A1 the score remains the same 
-    #if the alternate allele isn't the minor allele check if it's the dominant allele
-    elif alternate_allele == row['A2']:
-        #counter but don't need this anymore
-        adjustment_counter += 1  # 
-        return 1 - row['MAF']  #change the score 
-    else:
-        return row['MAF']  #if neither condition is met (in case score is nan)
-    
-vcf=pd.read_csv('../ClinVar/final_dbSNP_sep_SNP_INFO.csv',low_memory=False)
+from src.src.adjust_maf import adjust_maf
 
 
-allele_dir = 'allele_freq_all_groups'
+vcf=pd.read_csv('',low_memory=False) #path where the vcf is stored 
 
-os.makedirs(allele_dir, exist_ok=True)
-# Get the list of files in the current directory
-files = os.listdir('.')
-adjustment_counter = 0
+
+
+files = os.listdir('.') #make sure all the necessary files are in the same directory (all the frq.tsv files are in the working directory)
+
 
 #iterates over all the allele frequency file which were generated using plink v.1.9 
 for file in files:
@@ -66,6 +44,3 @@ for file in files:
         
         #for the first file in the loop this command will create a new csv file, but for the subsequent files it will just append the results into the csv
         merged_df.to_csv('allele_freq.csv',  mode='a', header=not os.path.exists('allele_freq.csv'), index=False)
-
-    
-

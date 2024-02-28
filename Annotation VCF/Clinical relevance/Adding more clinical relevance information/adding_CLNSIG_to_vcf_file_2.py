@@ -2,14 +2,14 @@ import pandas as pd
 import vcf 
 
 #convert the preprocessed vcf file (which is now a csv) into a df 
-df=pd.read_csv('filtered2_draft.csv')
+df=pd.read_csv('filtered2_draft.csv') 
 
 #cleaning up the file
 df['Clinical_impact'].replace("(nan, {'CLNDN': ['not_provided']})", None, inplace=True)
 df['Clinical_impact'].replace("(nan, {'CLNDN': ['not_specified|not_provided']})", None, inplace=True)
 df['Clinical_impact'].replace(["('Height', nan)"], 'Height', inplace=True)
 
-vcf_reader = vcf.Reader(open('filtered3_output.vcf','r'))
+vcf_reader = vcf.Reader(open('filtered3_output.vcf','r')) #filtered3_output.vcf was created in getting_CLNSIG_from_clinvar_1.py
 
 data=[]
 
@@ -41,6 +41,9 @@ merged['Clinical_impact'] = merged['Clinical_impact'].fillna('')+ merged['CLINIC
 merged.drop(columns={'CHROM_y','CLINICAL IMPLICATIONS','ID'},inplace=True)
 
 merged.drop_duplicates(inplace=True)
+
+#converting data frame into csv
+merged.to_csv('added_clinical_info_final_dbSNP_sep_SNP_INFO.csv')
 
 #converting data frame into csv
 merged.to_csv('added_clinical_info_final_dbSNP_sep_SNP_INFO.csv')
