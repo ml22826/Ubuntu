@@ -5,8 +5,8 @@ To run the web application, move to Ubuntu_Flask directory and execute the comma
 ### Run flask on WINDOWS using:
 OPEN COMMAND PROMPT, GO TO CORRECT DIRECTORY of file (cd ....)
 <code>
-<br> set FLASK_APP=__init__.py <br>
-<br> set FLASK_DEBUG=1 <br>
+<p> set FLASK_APP=__init__.py <p>
+<p> set FLASK_DEBUG=1 <p>
 <br> flask run <br>
 </code>
 ### Run flask on LINUX using:
