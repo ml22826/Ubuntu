@@ -49,7 +49,7 @@ Sharepoint link (zipped file):
 
 Download the whole Flask app (make sure you have installed the requirements and changed the value of 'user', 'password', 'host', 'database' in the read_config function in the app.py file):
 
-Github link: https://github.com/ml22826/Ubuntu/tree/main/Ubuntu_Flask
+Github link: https://github.com/ml22826/Ubuntu/tree/main/Front%20end
 
 Install MySQL server 8.0 
 
