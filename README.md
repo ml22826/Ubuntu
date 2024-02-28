@@ -19,14 +19,19 @@ Python 3.10
 
 Flask
 
+Flask_WTF
+
 Pandas 
 
 Matplotlib 
 
 mysql-connector-python
 
--- other ones 
+NumPy
 
+seaborn
+
+beautifulsoup4
 
 This command on the CMD will install all the correct packages 
 
