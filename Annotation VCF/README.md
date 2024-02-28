@@ -32,7 +32,7 @@ Below, is a  flowchart illustrating the sequential steps undertaken to annotate 
 
 [SnpEff Annotation code](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/SnpEff/code)
 
-[Cleaning up the annotated VCF code](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Linking%20SNP%20to%20their%20dbSNP%20ids/code)
+[Cleaning up the annotated VCF code](https://github.com/ml22826/Ubuntu/blob/camila-refactoring/Annotation%20VCF/Extraction%20from%20annotation/gene_name_extraction.sh)
 
 [Linking SNPs to their dbSNP_IDs](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Linking%20SNP%20to%20their%20dbSNP%20ids/code)
 
