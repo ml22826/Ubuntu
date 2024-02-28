@@ -83,10 +83,10 @@ class QueryForm(FlaskForm):
 def read_config():
     # Database connection parameters
     config = {
-        'user': 'root',
-        'password': 'ubuntu123',  
-        'host': 'localhost',
-        'database': 'ubuntu',
+        'user': 'XXXX',
+        'password': 'XXXX',  
+        'host': 'XXXX',
+        'database': 'XXXX',
     }
     return config
 
