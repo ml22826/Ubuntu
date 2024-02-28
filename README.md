@@ -43,7 +43,7 @@ python3.10 -m venv .venv_project
 source .venv_project/bin/activate
 pip install -r requirements.txt
 ```
-Download the DB SQL Script (as the DB is large it might take a few hours):
+Download the DB SQL Script (as the DB is large it might take a few hours): [ubuntu.sql](https://qmulprod-my.sharepoint.com/personal/bt23801_qmul_ac_uk/_layouts/15/onedrive.aspx?id=%2Fsites%2FDatabaseforUbuntuproject%2FShared%20Documents&listurl=https%3A%2F%2Fqmulprod%2Esharepoint%2Ecom%2Fsites%2FDatabaseforUbuntuproject%2FShared%20Documents&sharedLibraryCreated=true)
 
 Sharepoint link (zipped file):  
 
