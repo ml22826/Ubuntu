@@ -16,7 +16,10 @@ The final annotated VCF file was in the form of a CSV and contained information 
 **Description:** This folder looks into the various methodologies which were used to establish links between SNPs and potential clinical implications or traits. Information from GWAS websites and ClinVar is used to explore and find clinical associations.
 
 ## Gene table
-Created a table for each gene affected by the SNPs from the VCF.This table includes the start and end positions of the chromosome where the SNPs associated with those genes are located.
+**Description:** Created a table for each gene affected by the SNPs from the VCF.This table includes the start and end positions of the chromosome where the SNPs associated with those genes are located.
+
+## Extraction from annotation
+**Description:** This folder holds the code used to extract the gene names  from the annotated vcf. It was used to simplify the VCF. 
 
 
 
@@ -29,7 +32,7 @@ Below, is a  flowchart illustrating the sequential steps undertaken to annotate 
 
 [SnpEff Annotation code](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/SnpEff/code)
 
-[Cleaning up the annotated VCF code](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Linking%20SNP%20to%20their%20dbSNP%20ids/code)
+[Cleaning up the annotated VCF code](https://github.com/ml22826/Ubuntu/blob/camila-refactoring/Annotation%20VCF/Extraction%20from%20annotation/gene_name_extraction.sh)
 
 [Linking SNPs to their dbSNP_IDs](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Linking%20SNP%20to%20their%20dbSNP%20ids/code)
 
