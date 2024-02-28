@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Matrix</title>
+</head>
+<body>
+    <a href="/allele&genotype_frequencies-clinical_relevance/pop_matrix/download" class="pop_matrix"><button>Download</button></a>
+    <h1>Population Matrix</h1>
+    
+    {{ pop_matrix|safe }}
+
+    <h1>Population Matrix Heatmap</h1>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Population Matrix Heatmap">
+    
+</body>
+</html>
