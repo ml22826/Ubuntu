@@ -10,8 +10,8 @@ OPEN COMMAND PROMPT, GO TO CORRECT DIRECTORY of file (cd ....)
 <br> flask run <br>
 </code>
 ### Run flask on LINUX using:
-<code><br> export FLASK_APP=app.py <br>
-<br> export FLASK_DEBUG=1 <br>
-<br> flask run <br></code>
+<code><br>export FLASK_APP=app.py<br>
+<br>export FLASK_DEBUG=1<br>
+<br>flask run <br></code>
 _______________________________________
 
