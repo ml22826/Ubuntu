@@ -32,15 +32,15 @@ Below, is a  flowchart illustrating the sequential steps undertaken to annotate 
 
 [SnpEff Annotation code](https://github.com/ml22826/Ubuntu/blob/main/Back_end/Database/Annotation_VCF/SnpEff/code.sh)
 
-[Cleaning up the annotated VCF code](https://github.com/ml22826/Ubuntu/blob/camila-refactoring/Annotation%20VCF/Extraction%20from%20annotation/gene_name_extraction.sh)
+[Cleaning up the annotated VCF code](https://github.com/ml22826/Ubuntu/blob/main/Back_end/Database/Annotation_VCF/Extraction%20from%20annotation/gene_name_extraction.sh)
 
-[Linking SNPs to their dbSNP_IDs](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Linking%20SNP%20to%20their%20dbSNP%20ids/code)
+[Linking SNPs to their dbSNP_IDs](https://github.com/ml22826/Ubuntu/blob/main/Back_end/Database/Annotation_VCF/Linking%20SNP%20to%20their%20dbSNP%20ids/src/code.sh)
 
-[Adding Clinical relevance information to the VCF](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Clinical%20relevance/Adding_clinvar(1).py)
+[Adding Clinical relevance information to the VCF](https://github.com/ml22826/Ubuntu/blob/main/Back_end/Database/Annotation_VCF/Clinical%20relevance/src/Adding_clinvar(1).py)
 
-[Adding more clinical info](https://github.com/ml22826/Ubuntu/tree/main/Annotation%20VCF/Clinical%20relevance/Adding%20more%20clinical%20relevance%20information)
+[Adding more clinical info](https://github.com/ml22826/Ubuntu/tree/main/Back_end/Database/Annotation_VCF/Clinical%20relevance/Adding%20more%20clinical%20relevance%20information)
 
-[Cleaning up the file(final cleanup)](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/Clinical%20relevance/Adding%20more%20clinical%20relevance%20information/cleaning_final_finle_3.py)
+[Cleaning up the file(final cleanup)](https://github.com/ml22826/Ubuntu/blob/main/Back_end/Database/Annotation_VCF/Clinical%20relevance/Adding%20more%20clinical%20relevance%20information/cleaning_final_file_3.py)
 
 
 
