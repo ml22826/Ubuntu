@@ -13,7 +13,7 @@ files = os.listdir('.') #make sure all the necessary files are in the same direc
 #iterates over all the allele frequency file which were generated using plink v.1.9 
 for file in files:
     #Check if the item is a file and ends with .frq
-    if os.path.isfile(file) and  file.endswith('frq.tsv'):
+    if os.path.isfile(file) and  file.endswith('frq.tsv'): #this part can be changed according to the ending of the file
         
         #setting an order for the columns for each file
         desired_order = ['SNP','CHR','POS','ALT_FRQ','REF_FRQ','POP']
