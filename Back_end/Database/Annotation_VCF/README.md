@@ -25,7 +25,7 @@ The final annotated VCF file was in the form of a CSV and contained information 
 
 
 
-Below, is a  flowchart illustrating the sequential steps undertaken to annotate the VCF file. This flowchart also includes snippets of the first few lines of each file. While hyperlinking isn't directly supported on GitHub for this flowchart, below the diagram includes all the necessary links for users to navigate through the folder, providing information into the steps involved in annotating the file with gene names, clinical information, and dbSNP IDs.
+Below, is a  flowchart illustrating the sequential steps undertaken to annotate the VCF file. This flowchart also includes snippets of the first few lines of each file. While hyperlinking isn't directly supported on GitHub for this flowchart, below the diagram includes all the necessary links for users to navigate through the folder, providing information into the steps involved in annotating the file with gene names, clinical information, and dbSNP IDs. The final file (complete_snp_info.csv) is that data which was inputed in our 'snp_info' table in our database.
 
 ![Diagram](https://github.com/camilaballenghien/cballenghien.github.io/blob/master/images/flowchart.drawio.png)
 
