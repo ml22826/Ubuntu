@@ -61,7 +61,7 @@ CREATE DATABASE ubuntu;
 ```
 Import the SQL file into the db (ubuntu.sql file)
 
-Import the file to the DB:
+Import the file to the DB (don't forget to unzip the script first):
 ```bash
 mysql -u username -p ubuntu < /path/to/your/ubuntu.sql
 ```
