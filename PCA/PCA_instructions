@@ -1,0 +1,2 @@
+#1 Carry out PCA.sh, from this you can obtain a eigenvec file
+#2 Then you create the csv table from the eigenvec file by following the code in the PCA_tocsv.py file
