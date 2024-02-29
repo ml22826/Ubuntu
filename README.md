@@ -72,7 +72,7 @@ In this folder there is also csv files which aren't too large that the user can 
 
 ## RUNNING THE SOFTWARE (FLASK)
 
-To run the web application, move to Ubuntu_Flask directory and execute the commands based on OS:
+To run the web application, move to Front end directory and execute the commands based on OS:
 
 ### Run flask on WINDOWS:
 
