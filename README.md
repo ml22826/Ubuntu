@@ -17,21 +17,21 @@ To run the user interface, make sure  you have the following installed and updat
 
 Python 3.10
 
-Flask
+Flask 3.0.2 
 
-Flask_WTF
+Flask_WTF 1.2.1
 
-Pandas 
+mysql-connector-python 8.3.0
 
-Matplotlib 
+Pandas 2.2.0
 
-mysql-connector-python
+Matplotlib 3.8.2
 
-NumPy
+NumPy 1.26.3
 
-seaborn
+seaborn 0.13.2
 
-beautifulsoup4
+beautifulsoup4 4.12.2
 
 This command on the CMD will install all the correct packages 
 
