@@ -21,7 +21,7 @@ Flask 3.0.2
 
 Flask_WTF 1.2.1
 
-mysql-connector-python 8.2.0
+mysql-connector-python 8.3.0 (if 8.3.0 does not work, use 8.2.0)
 
 Pandas 2.2.0
 
