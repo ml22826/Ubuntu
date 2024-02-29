@@ -2,7 +2,7 @@
 
 Welcome to the Github repository of the Ubuntu Analysis tool. 
 
-Ubuntu is a fast and user friendly interface deigned to facilitate the analysis of genetic data collected from diverse human populations (at present there are 27 population groups).
+Ubuntu is a fast and user friendly interface designed to facilitate the analysis of genetic data collected from diverse human populations (at present there are 27 population groups).
 This tool allows users to explore the genetic landscape of these population, getting insightful information into population structure and genetic diversity.
 What it does: 
 - Calculates allele and genotype frequencies of Single Nucleotide Polymorphisms (SNPs) within chromosome 1 across 27 distinct population groups spanning different regions of the world. It also offers the user the ability to compare frequencies between populations through visual representation.
