@@ -30,7 +30,7 @@ Below, is a  flowchart illustrating the sequential steps undertaken to annotate 
 ![Diagram](https://github.com/camilaballenghien/cballenghien.github.io/blob/master/images/flowchart.drawio.png)
 
 
-[SnpEff Annotation code](https://github.com/ml22826/Ubuntu/blob/main/Annotation%20VCF/SnpEff/code)
+[SnpEff Annotation code](https://github.com/ml22826/Ubuntu/blob/main/Back_end/Database/Annotation_VCF/SnpEff/code.sh)
 
 [Cleaning up the annotated VCF code](https://github.com/ml22826/Ubuntu/blob/camila-refactoring/Annotation%20VCF/Extraction%20from%20annotation/gene_name_extraction.sh)
 
