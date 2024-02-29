@@ -1,0 +1,22 @@
+
+
+#1. Download linux version of admixture from https://dalexander.github.io/admixture/download.html: Linux x86[_64]: admixture_linux-1.3.0.tar.gz 
+
+#2. Copy admixture_linux-1.3.0.tar.gz into apocrita
+scp pathway/to/file/located username@login.hpc.qmul.ac.uk: pathway/to/destination
+
+#3. Unzip admixture_linux-1.3.0.tar.gz file:
+tar -xvf admixture_linux-1.3.0.tar.gz
+
+#4. Copy bed, bim and fam file to apocrita (refer to bed_file.sh):
+scp pathway/to/file/located username@login.hpc.qmul.ac.uk: pathway/to/destination
+
+#5. Create jobscript:
+module load nano
+touch admixture.sh
+nano admixture.sh
+
+#6. admixture.sh script available under analysis folder called admixture.sh
+
+#7. When admixture analysis is finished a q file and p file should be produced copy back on to local machine: 
+scp username@login.hpc.qmul.ac.uk: pathway/to/Q.file pathway/to/destination
