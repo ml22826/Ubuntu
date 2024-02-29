@@ -21,7 +21,7 @@ The final annotated VCF file was in the form of a CSV and contained information 
 ## Extraction from annotation
 **Description:** This folder holds the code used to extract the gene names  from the annotated vcf. It was used to simplify the VCF. 
 
-
+## Flowchart
 
 
 
