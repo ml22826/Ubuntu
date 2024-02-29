@@ -15,7 +15,7 @@ This project was developed by the 'Ubuntu' student group at Queen Mary Universit
 
 To run the user interface, make sure  you have the following installed and updated: 
 
-Python 3.10
+Python 3.12.1
 
 Flask 3.0.2 
 
