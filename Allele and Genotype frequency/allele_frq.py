@@ -1,6 +1,6 @@
 import pandas as pd 
 import os 
-from src.src.adjust_maf import adjust_maf
+from src.adjust_maf import adjust_maf
 
 
 vcf=pd.read_csv('',low_memory=False) #path where the vcf is stored 
