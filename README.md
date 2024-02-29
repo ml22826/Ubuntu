@@ -45,7 +45,6 @@ pip install -r requirements.txt
 ```
 Download the DB SQL Script (as the DB is large it might take a few hours): [ubuntu.sql](https://qmulprod-my.sharepoint.com/personal/bt23801_qmul_ac_uk/_layouts/15/onedrive.aspx?id=%2Fsites%2FDatabaseforUbuntuproject%2FShared%20Documents&listurl=https%3A%2F%2Fqmulprod%2Esharepoint%2Ecom%2Fsites%2FDatabaseforUbuntuproject%2FShared%20Documents&sharedLibraryCreated=true)
 
-Sharepoint link (zipped file):  
 
 Download the whole Flask app (make sure you have installed the requirements and changed the value of 'user', 'password', 'host', 'database' in the read_config function in the app.py file):
 
@@ -67,8 +66,8 @@ mysql -u username -p ubuntu < /path/to/your/ubuntu.sql
 ```
 
 
-User can also create an identical database from scratch by running the SQL script which will create all the tables necessary (including the indexing and paritioning).
-In this folder there is also csv files which aren't too large that the user can download. 
+User can also create an identical database from scratch by running the SQL script in the Back_end/Database folder which will create all the tables necessary (including the indexing and paritioning).
+In this folder there is also sql scripts of the tables which aren't too large that the user can download. 
 
 ## RUNNING THE SOFTWARE (FLASK)
 

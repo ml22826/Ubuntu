@@ -7,7 +7,7 @@ CREATE TABLE Sample (
     PRIMARY KEY(id) 
 );
 
--- Import data from sample.csv
+-- Import data from sample.sql
 
 
 CREATE TABLE Population (
@@ -18,7 +18,7 @@ CREATE TABLE Population (
     PRIMARY KEY(PopulationCode)
 );
 
--- Import data from Population.csv
+-- Import data from population.sql
 
 CREATE TABLE SNP_INFO (
 	CHROM VARCHAR(50),
@@ -90,7 +90,7 @@ CREATE TABLE GENES (
     PRIMARY KEY(GENE)
 
 );
--- Import data from processed_genes.csv 
+-- Import data from processed_genes.sql
 
 
 CREATE TABLE pca_values (
@@ -103,7 +103,7 @@ CREATE TABLE pca_values (
 
 );
 
--- Import data from pca_values.csv
+-- Import data from pca_values.sql
 
 CREATE TABLE admixture (
 	id VARCHAR(255),
@@ -116,6 +116,6 @@ CREATE TABLE admixture (
 
 );
 
--- Import data from admixture.csv 
+-- Import data from admixture.sql
 
 
