@@ -771,8 +771,6 @@ def pop_matrix():
 
     # Create a Pandas dataframe based on the SNP data
     df = pd.DataFrame(SNP_data, columns=['CHROM', 'POS', 'SNP_ID', 'REF', 'ALT', 'GENES', 'dbSNP_ID', 'Clinical_impact', 'ALT_FRQ', 'REF_FRQ', 'HOM_ALT', 'HOM_REF', 'HET', 'POP'])
-    print(df)
-    session.pop('results', None)
 
     # Specify the populations and SNPs
     populations = df['POP'].unique()
@@ -780,7 +778,6 @@ def pop_matrix():
 
     # Create an empty Fst matrix
     fst_matrix = pd.DataFrame(np.nan, index=populations, columns=populations)
-    print(fst_matrix)
 
     # For each pair of populations, calculate Fst
     for snp in snps:
